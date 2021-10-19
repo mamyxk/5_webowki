@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pobrane.png">
+    <meta name="Keywords" content="HTML, Paragraf, Nagłówek">
+    <meta name="Description" content="Jakis opis tej niesamowitej strony">
+    <title>Tytuł, pojawia się na pasku w przeglądarce</title>
 </head>
 
 <body>
@@ -21,10 +26,14 @@
         <label for="region">Wojewodztwo:</label><br>
         <div>
             <select id="region" name="region">
-                <option value="dolnoslaskie">dolnoslaskie</option>
-                <option value="mazursko-pomorskie">mazursko-pomorskie</option>
-                <option value="mazowieckie">mazowieckie</option>
-                <option value="wielkopolskie">wielkopolskie</option>
+                <optgroup label="Grupa 1">
+                    <option value="dolnoslaskie">dolnoslaskie</option>
+                    <option value="mazursko-pomorskie">mazursko-pomorskie</option>
+                </optgroup>
+                <optgroup label="Grupa 2">
+                    <option value="mazowieckie">mazowieckie</option>
+                    <option value="wielkopolskie">wielkopolskie</option>
+                </optgroup>
             </select>
         </div>
         <div>
