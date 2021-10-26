@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pobrane.png">
+    <meta name="Keywords" content="HTML, Paragraf, Nagłówek">
+    <meta name="Description" content="Jakis opis tej niesamowitej strony">
+    <title>Tytuł, pojawia się na pasku w przeglądarce</title>
+</head>
+
+<body>
+    <form>
+        <label for="imie">Imie:</label><br>
+        <input type="text" id="imie" name="imie"><br>
+        <label for="nazwisko">Nazwisko:</label><br>
+        <input type="text" id="nazwisko" name="nazwisko"><br>
+        <p>Wybierz plec</p>
+        <input type="radio" id="M" name="plec" value="M">
+        <label for="M">M</label>
+        <input type="radio" id="K" name="plec" value="K">
+        <label for="K">K</label>
+        <input type="radio" id="U" name="plec" value="U">
+        <label for="U">Nie podaje</label>
+        <br>
+        <label for="region">Wojewodztwo:</label><br>
+        <div>
+            <select id="region" name="region">
+                <optgroup label="Grupa 1">
+                    <option value="dolnoslaskie">dolnoslaskie</option>
+                    <option value="mazursko-pomorskie">mazursko-pomorskie</option>
+                </optgroup>
+                <optgroup label="Grupa 2">
+                    <option value="mazowieckie">mazowieckie</option>
+                    <option value="wielkopolskie">wielkopolskie</option>
+                </optgroup>
+            </select>
+        </div>
+        <div>
+            <label for="hobby">Wybierz swoje hobby:</label><br>
+            <select id="hobby" name="hobby" size="4" multiple>
+                <option value="motoryzacja">motoryzacja</option>
+                <option value="informatyka">informatyka</option>
+                <option value="technologia">technologia</option>
+                <option value="piwo">piwo</option>
+            </select>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Jakie masz wyksztalcenie</legend>
+                <input type="checkbox" name="wyksztalcenie" value="Magister">Magister<br>
+                <input type="checkbox" name="wyksztalcenie" value="Dogs">Inzynier<br>
+                <input type="checkbox" name="wyksztalcenie" value="Licencjat">Licencjat<br>
+                <br>
+            </fieldset>
+        </div>
+        <div>
+            <label for="opis_siebie">O mnie:</label><br>
+
+            <textarea id="opis_siebie" name="opis_siebie" rows="4" cols="50">
+                Opisz siebie
+            </textarea>
+        </div>
+        <div>
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+    <div>
+        <a href="https://www.google.com/search?client=firefox-b-d&q=regulamin">Regulamin</a>
+        <a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.1.0-amd64-netinst.iso">Pobierz</a>
+        <a href="index.html">
+            <img alt="Qries" src="https://www.qries.com/images/banner_logo.png" width="150" height="70">
+        </a>
+        <a href="mailto:google@gmail.com">Kontakt google</a>
+    </div>
+</body>
+</html>

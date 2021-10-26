@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="authors" content="Kamil Lontkowski, Kamil Haniszewski" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms HTML5 2</title>
+  </head>
+  <body>
+    <h2>To jest prezentacja do zadania 2 z listy HTML5 2</h2>
+    <form autocomplete="on">
+      <fieldset>
+        <legend>Personal info</legend>
+        <label for="fname">First name: </label><br />
+        <input type="text" name="fname" id="fname" autofocus autocomplete="off"/> np. Jan<br />
+        <label for="lname">Last name: </label><br />
+        <input type="text" name="lname" id="lname" required/> np. Kowalski<br />
+        <label for="birthday">Month of birth: </label><br>
+        <input list="months" name="birthday" id="birthday" /> np. Semptember
+        <datalist id="months">
+          <option value="January"></option>
+          <option value="February"></option>
+          <option value="March"></option>
+          <option value="April"></option>
+          <option value="May"></option>
+          <option value="June"></option>
+          <option value="July"></option>
+          <option value="August"></option>
+          <option value="September"></option>
+          <option value="October"></option>
+          <option value="November"></option>
+          <option value="December"></option>
+        </datalist>
+
+        <br />
+        <label for="email">E-mail: </label><br />
+        <input type="email" name="email" id="email" required/> np. name@domain.com<br />
+        <label for="number">Phone number: </label><br />
+        <input
+          type="text"
+          id="number"
+          name="number"
+          pattern="/^[\.-)( ]*([0-9]{3})[\.-)( ]*([0-9]{3})[\.-)( ]*([0-9]{4})$/"
+        /> np. 123-123-123<br />
+
+        <input type="submit" name="submit" id="submit" value="Submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
