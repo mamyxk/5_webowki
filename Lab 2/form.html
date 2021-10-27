@@ -36,11 +36,11 @@
         <label for="email">E-mail: </label><br />
         <input type="email" name="email" id="email" required/> np. name@domain.com<br />
         <label for="number">Phone number: </label><br />
-        <input
+        <input required
           type="text"
           id="number"
           name="number"
-          pattern="/^[\.-)( ]*([0-9]{3})[\.-)( ]*([0-9]{3})[\.-)( ]*([0-9]{4})$/"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
         /> np. 123-123-123<br />
 
         <input type="submit" name="submit" id="submit" value="Submit" />

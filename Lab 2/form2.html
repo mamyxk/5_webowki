@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="authors" content="Kamil Lontkowski, Kamil Haniszewski" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="keywords" content="HTML, Javascript"/>
-        <title>Forms HTML5 2</title>
-      </head>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="authors" content="Kamil Lontkowski, Kamil Haniszewski" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, Javascript" />
+    <title>Forms HTML5 2</title>
+</head>
+
 <body>
     <form autocomplete="on">
         <fieldset>
@@ -21,13 +23,17 @@
             <input type="url" name="url" id="url" placeholder="google.com"><br>
             <label for="range">Przedział</label><br>
             <!--Troche javascriptu żeby było widać rezultat -->
-            <input type="range" name="range" id="range" min="0" max="10" step="0.5" value="0" oninput="rangeoutput.value = this.value">
+            <input type="range" name="range" id="range" min="0" max="10" step="0.5" value="0"
+                oninput="rangeoutput.value = this.value">
             <output id="rangeoutput">0</output>
+
+            <input type="submit" name="submit" id="submit" value="Submit" />
 
         </fieldset>
     </form>
     <form action="./index.html">
         <input type="submit" value="Wróć" />
-      </form>
+    </form>
 </body>
+
 </html>
