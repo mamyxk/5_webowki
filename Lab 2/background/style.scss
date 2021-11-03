@@ -1,0 +1,55 @@
+article {
+    background-color: aqua;
+}
+
+#ind1 {
+    font-size: 100%;
+    margin: 40px;
+    background-color: beige;
+}
+
+#ind2 {
+    font-size: 2em;
+}
+
+#ind3 {
+    font-size: 24px;
+    margin: 50px,50px,50px,50px;
+    padding-top: 300px;
+    background-color:white;
+}
+
+#ind4 {
+    font-size: 12pt;
+} 
+
+#ind7 {
+    position:relative;
+    top:150px;
+}
+
+div > p {
+    font-size: 40px;
+    background-color: blanchedalmond;
+    padding-top: 40px;
+}
+
+#bk_repeat {
+    background-image: url(tlo1.jpg);
+    background-repeat: repeat;
+    background-position-x: 130px;
+}
+
+
+#bk_no_repeat {
+    background-image: url(tlo1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: inherit  ;
+    background:local;
+}
+
+.floating {
+    float:left;
+    max-width: 400px;
+}
+
