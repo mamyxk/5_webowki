@@ -15,14 +15,18 @@
     </script>
   </head>
   <body onload="bodyLoaded()">
-    <h1>
+    <p id="para" style="float: right"></p>
+    <h3>
       Tutaj będziemy wykorzystywać document.writeln bo inaczej byśmy nadpisywali
       cały dokument
-    </h1>
+    </h3>
     <iframe id="myiframe" name="myiframe"></iframe>
     <button id="myButton">Write</button>
     <br /><br />
-    <textarea maxlength="100" cols="25" id="textarea1">Halo</textarea>
-    <button id="button1">Prompt</button>
+    <textarea maxlength="100" cols="25" id="textarea1">
+Tu się pokaże tekst po wciśnięciu przycisku</textarea
+    >
+    <button id="button1">Prompt</button><br /><br />
+    <button id="button2">Show alert</button>
   </body>
 </html>
