@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triangle</title>
+
+</head>
+
+<body>
+    <h1>
+        Prosty kalkulator przyprostokatnej
+    </h1>
+    <form id="triangle">
+        Bok 1: <input type="text" id="tr_c" name="tr_c" value="5"><br> Bok 2: <input type="text" id="tr_b" name="tr_b" value="4"><br><br>
+    </form>
+    <button id="triangle_btn">Calculate</button>
+    <h3 id="triangle_res">NULL</h3>
+
+    <script type="text/javascript">
+        document.getElementById("triangle_btn").onclick = function() {
+            var xx = document.getElementById("tr_c").value;
+            var yy = document.getElementById("tr_b").value;
+            console.log("Running method triangleFUn  " + xx + "  " + yy)
+            var x = parseInt(xx)
+            var y = parseInt(yy)
+            var res = 0;
+            if (x > y) {
+                res = Math.sqrt(x * x - y * y);
+            } else {
+                res = Math.sqrt(y * y - x * x);
+            }
+            if (res == 0) {
+                document.getElementById("triangle_res").innerHTML = "Nieodpowiednie dane";
+            } else {
+                document.getElementById("triangle_res").innerHTML = res;
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
