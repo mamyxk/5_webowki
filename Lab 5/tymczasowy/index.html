@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <!-- Ta funkcja ładuje plik main.js dopiero po załadowaniu body -->
+    <script>
+      function bodyLoaded() {
+        var tag = document.createElement("script");
+        tag.src = "main.js";
+        document.getElementsByTagName("head")[0].appendChild(tag);
+        console.log("Body script added");
+      }
+    </script>
+  </head>
+  <body onload="bodyLoaded()">
+    <h1>
+      Tutaj będziemy wykorzystywać document.writeln bo inaczej byśmy nadpisywali
+      cały dokument
+    </h1>
+    <iframe id="myiframe" name="myiframe"></iframe>
+    <button id="myButton">Write</button>
+    <br /><br />
+    <textarea maxlength="100" cols="25" id="textarea1">Halo</textarea>
+    <button id="button1">Prompt</button>
+  </body>
+</html>
