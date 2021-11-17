@@ -18,7 +18,30 @@
     <button id="triangle_btn">Calculate</button>
     <h3 id="triangle_res">NULL</h3>
 
+    <h1>
+        Gra w zgadywanie <br>
+    </h1>
+    <input type="text" id="ran_gues" value="0">
+    <div id="ran_res">Result</div>
+
+    <button id="gen_ran">Generuj liczbe</button>
+    <button id="gues_ran">Zgaduj</button>
+
+    <h1>
+        Testy zegara <br>
+    </h1>
+    <div id="zegar_res" onload="zegar()">0.0</div>
+    <button id="reset_button">Resetuj zegary</button>
+
+
     <script type="text/javascript">
+        var random_num = 0;
+
+        function sleep(delay) {
+            var start = new Date().getTime();
+            while (new Date().getTime() < start + delay);
+        }
+
         document.getElementById("triangle_btn").onclick = function() {
             var xx = document.getElementById("tr_c").value;
             var yy = document.getElementById("tr_b").value;
@@ -36,9 +59,51 @@
             } else {
                 document.getElementById("triangle_res").innerHTML = res;
             }
-
-
         }
+
+        document.getElementById("gen_ran").onclick = function() {
+            random_num = Math.floor(Math.random() * (10 - 1)) + 1;
+        }
+
+        document.getElementById("gues_ran").onclick = function() {
+            var aa = document.getElementById("ran_gues").value;
+            var a = parseInt(aa);
+
+            switch (a) {
+                case random_num:
+                    document.getElementById("ran_res").innerHTML = "Brawo zgadles liczbe";
+                    break;
+                default:
+                    if (a > random_num) {
+                        document.getElementById("ran_res").innerHTML = "Podales za duza liczbe";
+                    } else {
+                        document.getElementById("ran_res").innerHTML = "Podales zbyt mala liczbe";
+                    }
+            }
+        }
+        var seconds = 0.0;
+
+
+        document.getElementById("reset_button").onclick = function() {
+            for (i = 0; i < 10; i++) {
+                console.log("i = " + i)
+            }
+
+            var temp = 50;
+            while (temp < 50) {
+                console.log("temp = " + temp)
+            }
+
+            var temp = 50;
+            do {
+                console.log("temp1 = " + temp)
+            } while (temp < 50)
+        }
+
+        var zegarmistrz = setInterval(function() {
+            seconds += 0.5;
+            document.getElementById("zegar_res").innerHTML = seconds;
+        }, 500);
     </script>
 </body>
 
