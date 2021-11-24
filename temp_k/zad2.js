@@ -1,7 +1,5 @@
-document.getElementById("kliknij").addEventListener("click", function(e) {
-    var ec = e.clientX
-    var yc = e.clie
-    document.getElementById("client").innerHTML = "ClientX: " + e.clientX + "  ClientY:  " + e.clientY + "<br>" + "ScreenX: " + e.screenX + "  ScreenY:  " + e.screenY
+document.forms.item(0)["sum_form"].addEventListener("click", function(e) {
+    console.log("Udana demonstracja")
 });
 
 function images() {
