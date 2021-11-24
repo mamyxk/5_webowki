@@ -7,3 +7,8 @@ Proj_sys_webowych
 - [x] Lista 3 (9 na 10)
 - [x] Lista 4 (10 na 10)
 - [x] Lista 5 (10 na 10) 
+- [x] Lista 6 (9,5 na 10)
+- [ ] Lista 7
+- [ ] Lista 8
+- [ ] Lista 9
+- [ ] Lista 10
