@@ -9,7 +9,7 @@ klikajj.addEventListener("click", function(e) {
     document.getElementById("client").innerHTML = "ClientX: " + e.clientX + "  ClientY:  " + e.clientY + "<br>" + "ScreenX: " + e.screenX + "  ScreenY:  " + e.screenY;
 });
 
-document.onkeypress = function(e) {
+document.onkeydown = function(e) {
     e = e || window.event;
     if (e.shiftKey) {
         console.log("Wcisniety SHIFT")
@@ -37,4 +37,7 @@ klikajj.addEventListener("mouseover", e => {
 
 klikajj.addEventListener("mouseout", e => {
     console.log("Kursor juz przemieszony")
+});
+obrazek.addEventListener("mousemove", e => {
+    console.log("Kursor się rusza")
 });

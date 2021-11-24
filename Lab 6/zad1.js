@@ -34,7 +34,7 @@ function removeLast() {
 }
 
 function replaceFirst() {
-  var list = document.getElementById("list").childNodes[0];
+  var listItem = document.getElementById("list").childNodes[0];
   var textnode = document.createTextNode("Water");
-  list.replaceChild(textnode, list.childNodes[0]);
+  listItem.replaceChild(textnode, listItem.childNodes[0]);
 }
