@@ -9,6 +9,6 @@ Proj_sys_webowych
 - [x] Lista 5 (10 na 10) 
 - [x] Lista 6 (9,5 na 10)
 - [x] Lista 7 Przygotowanie XAMPP
-- [ ] Lista 8
+- [x] Lista 8 (10 na 10)
 - [ ] Lista 9
 - [ ] Lista 10
