@@ -8,7 +8,8 @@
   </head>
   <body>
   <?php
-$name = $surname = $number = $email = $state = $city = $interest = $gender = "";
+$name = $surname = $number = $email = $state = $city = $gender = "";
+$interest = [];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST["name"];
   $surname = $_POST["surname"];
@@ -22,7 +23,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (isset($_POST['gender']) && !empty($_POST['gender'])) {
     $gender = $_POST["gender"];
   }
+  if (isset($_POST['number']) && !empty($_POST['number'])) {
+    if (!preg_match("/^[0-9]{9}/", $number)){
+        print( "<p class = 'error'>Invalid phone number</p>
+               <p>A valid phone number must be in the form
+                123123123</p>" );
+        print("<br><a href=" . "forms.php" . ">Go back</a>");
+        die();
+      }
+  }
+  if (isset($_POST['email']) && !empty($_POST['email'])) {
+    if (!preg_match("/^[a-zA-Z0-9]+@[a-z]+.[a-z]+$/", $email)){
+        print( "<p class = 'error'>Invalid email</p>
+               <p>A valid email must be in the form
+                aaaa@aaa.com</p>" );
+        print("<br><a href=" . "forms.php" . ">Go back</a>");
+        die();
+      }
+  } 
 }
+
 ?>
     <div class="signup-content">
       <div class="signup-form">
@@ -128,9 +148,14 @@ echo $email . "<br>";
 echo $gender . "<br>";
 echo $state . "<br>";
 echo $city . "<br>";
-// foreach($interest as $interes){
-//     echo $interes . " ";
-// }
+foreach($interest as $interes){
+    echo $interes . " ";
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+echo "<br>" . "Client ip address: " . $_SERVER['REMOTE_ADDR'];
+echo "<br><br>";
+$email = preg_replace("/^[^@]*/", "REPLACED", $email);
+echo "<p>Replaced email: " . $email ."</p>";}
 ?>
   </body>
 </html>
