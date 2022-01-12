@@ -13,6 +13,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }else{
     $conn ->query($query_create_db);
+    header('Location: create_tables.php');
   }
   
 ?>
