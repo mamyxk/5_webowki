@@ -13,6 +13,7 @@
 
         form {
             border: 3px solid #f1f1f1;
+            border-radius: 3px;
         }
 
         input[type=text],
@@ -23,6 +24,7 @@
             display: inline-block;
             border: 1px solid #ccc;
             box-sizing: border-box;
+            border-radius: 3px;
         }
 
         button {
@@ -33,6 +35,7 @@
             border: none;
             cursor: pointer;
             width: 100%;
+            border-radius: 3px;
         }
 
         button:hover {
