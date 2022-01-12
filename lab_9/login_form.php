@@ -9,10 +9,17 @@ if(isset($_SESSION['logged'])){
 }else{
     //Niezalogowany
     if(isset($_POST['uname'])){
-        $connection = new mysqli($db_host, $db_user, $db_pass);
+        $connection = new mysqli($db_host, $db_user, $db_pass,$db_name);
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
           }
+            $uname = $mysqli -> real_escape_string($_POST['uname']);
+            $psw = $mysqli -> real_escape_string($_POST['psw']);
+            $sql = "SELECT * FROM Users where login = ".$uname." and password = ".$psw.";";
+            $result = $conn ->query($sql);
+            if(mysqli_num_rows($result)==1){
+                echo "Zalogowano";
+            }
           echo "Connected successfully";
     }
 }
