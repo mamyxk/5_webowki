@@ -15,10 +15,20 @@ $query_create_table_users = "create table Users (
 
 $conn = new mysqli($db_host, $db_user, $db_pass);
 
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
+  }else{
+    $conn ->query($query_create_db);
+    $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }else{
+        $conn ->query($query_create_table_users);
+        
+      }
   }
-  $conn ->query($query_create_db);
+  
 
 
 
