@@ -87,27 +87,48 @@
 
     <form action="/action_page.php" style="border:1px solid #ccc; border-radius: 3px;">
         <div class="container">
-            <h1>Sign Up</h1>
-            <p>Please fill in this form to create an account.</p>
-            <hr>
+            <?php
+            $name = "Jan";
+            $surname = "Kowalski";
+            $login = "login";
+            if (isset($_SESSION['logged'])) {
 
-            <label for="login"><b>Login</b></label>
-            <input type="text" placeholder="Enter login" name="login" required>
+                echo '<h1>Hello logged user</h1>';
+                echo '<label for="login"><b>Login</b></label>';
+                echo '<input type="text" placeholder="Enter login" name="login" required value="' . $login . '">';
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+                echo '<label for="name"><b>Name</b></label>';
+                echo '<input type="text" placeholder="Name" name="name" required value="' . $name . '">';
 
-            <label for="psw-repeat"><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                echo '<label for="surname"><b>Surname</b></label>';
+                echo '<input type="text" placeholder="Surname" name="surname" required value="' . $surname . '" >';
+            }
+            else {
+                echo '<h1>Sign Up</h1>';
+                echo '<p>Please fill in this form to create an account.</p>';
+                echo '<hr>';
+                
+                echo '<label for="login"><b>Login</b></label>';
+                echo '<input type="text" placeholder="Enter login" name="login" required>';
 
-            <label for="name"><b>Name</b></label>
-            <input type="text" placeholder="Name" name="name" required>
+                echo '<label for="psw"><b>Password</b></label>';
+                echo '<input type="password" placeholder="Enter Password" name="psw" required>';
 
-            <label for="surname"><b>Surname</b></label>
-            <input type="text" placeholder="Surname" name="surname" required>
+                echo '<label for="psw-repeat"><b>Repeat Password</b></label>';
+                echo '<input type="password" placeholder="Repeat Password" name="psw-repeat" required>';
+
+                echo '<label for="name"><b>Name</b></label>';
+                echo '<input type="text" placeholder="Name" name="name" required>';
+                
+                echo '<label for="surname"><b>Surname</b></label>';
+                echo ' <input type="text" placeholder="Surname" name="surname" required>';
+
+            }
+
+            ?>
 
             <div class="clearfix">
-                <button type="button" class="cancelbtn">Cancel</button>  
+                <button type="button" class="cancelbtn">Cancel</button>
                 <button type="submit" class="signupbtn">Sign Up</button>
             </div>
         </div>
