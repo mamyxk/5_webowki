@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(!isset($_SESSION['logged'])){
     ?>
 <div class="topnav">
@@ -17,12 +18,14 @@ if(!isset($_SESSION['logged'])){
 ?>
 <div class="topnav">
   <a class="active" href="#home">Home</a>
+  
   <div class="login-container">
-    <span class="login-uname">Username</span>
-    <form>
+    <form action="./logout.php">
       <button type="submit">Logout</button>
     </form>
   </div>
+  <span class="login-uname" style="float:right;"><?php  echo $_SESSION['logged'];?></span>
+    
 </div>
 
 <?php

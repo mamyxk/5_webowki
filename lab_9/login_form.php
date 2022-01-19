@@ -35,5 +35,5 @@ if(isset($_SESSION['logged'])){
         echo "Uname not set";
     }
 }
-
+header('Location: index.php');
 ?>
