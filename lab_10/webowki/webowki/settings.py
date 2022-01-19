@@ -54,7 +54,7 @@ ROOT_URLCONF = 'webowki.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['zadanie/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
