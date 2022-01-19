@@ -11,5 +11,11 @@
     <input type="submit" value="Submit">
 </form>
 <br><br>
+<h4>Uzyskane dane: </h4>
+{% for field in form %}
+{% if field != None %}
+<p><strong>{{field.value}}</strong></p>
+{% endif %}
+{% endfor %}
 </body>
 </html>

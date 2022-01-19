@@ -13,7 +13,7 @@ class MyForm(forms.Form):
         data = self.cleaned_data.get("message")
 
         if not re.match(r".*1337$", data):
-            raise forms.ValidationError("The string doesn't end with 1337!")
+            raise forms.ValidationError("The message doesn't end with 1337!")
 
         return data
 
