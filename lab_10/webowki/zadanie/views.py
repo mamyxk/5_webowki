@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest
 from .forms import MyForm
 
@@ -16,6 +16,8 @@ def info(request:  HttpRequest):
 def form(request: HttpRequest):
     if request.method == "POST":
         fo = MyForm(request.POST)
+        if fo.is_valid():
+            redirect("form/")
     else:
         fo = MyForm()
     return render(request, "zadanie/form.html", {'form': fo})
