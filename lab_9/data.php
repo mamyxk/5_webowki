@@ -98,7 +98,6 @@
                 $connection = new mysqli($db_host, $db_user, $db_pass,$db_name);
                 $sql = "SELECT * FROM Users where login = '{$_SESSION['logged']}';";
                 $result = mysqli_query($connection,$sql);
-                var_dump($result);
 
 
 
