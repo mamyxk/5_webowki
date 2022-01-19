@@ -85,9 +85,10 @@
 
 <body>
 
-    <form action="/action_page.php" style="border:1px solid #ccc; border-radius: 3px;">
+    <form action="/data_action.php" method="post" style="border:1px solid #ccc; border-radius: 3px;">
         <div class="container">
             <?php
+            session_start();
             $name = "Jan";
             $surname = "Kowalski";
             $login = "login";
@@ -102,6 +103,11 @@
 
                 echo '<label for="surname"><b>Surname</b></label>';
                 echo '<input type="text" placeholder="Surname" name="surname" required value="' . $surname . '" >';
+
+                echo '<div class="clearfix">';
+                echo '<button type="button" class="cancelbtn">Cancel</button>';
+                echo '<button type="submit" class="signupbtn">Change data</button>';
+                echo '</div>';
             }
             else {
                 echo '<h1>Sign Up</h1>';
@@ -122,15 +128,15 @@
                 
                 echo '<label for="surname"><b>Surname</b></label>';
                 echo ' <input type="text" placeholder="Surname" name="surname" required>';
-
+                
+                echo '<div class="clearfix">';
+                echo '<button type="button" class="cancelbtn">Cancel</button>';
+                echo '<button type="submit" class="signupbtn">Sign Up</button>';
+                echo '</div>';
             }
 
             ?>
 
-            <div class="clearfix">
-                <button type="button" class="cancelbtn">Cancel</button>
-                <button type="submit" class="signupbtn">Sign Up</button>
-            </div>
         </div>
     </form>
 
