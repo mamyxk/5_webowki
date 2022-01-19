@@ -19,8 +19,10 @@ if(isset($_SESSION['logged'])){
             echo "Connected to db";
             $uname = mysqli_real_escape_string($connection,$_POST['username']);
             $psw = mysqli_real_escape_string($connection,$_POST['psw']);
-            $sql = "SELECT * FROM Users where login = ".$uname." and password = ".$psw.";";
+            $sql = "SELECT * FROM Users where login = '{$uname}' and passowrd = '{$psw}';";
+            var_dump($sql);
             $result = mysqli_query($connection,$sql);
+            var_dump($result);
             $num_rows = mysqli_num_rows($result);
             var_dump($num_rows);
             if($num_rows){
