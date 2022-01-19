@@ -93,6 +93,14 @@
             $surname = "Kowalski";
             $login = "login";
             if (isset($_SESSION['logged'])) {
+                require('db_config.php');
+
+                $connection = new mysqli($db_host, $db_user, $db_pass,$db_name);
+                $sql = "SELECT * FROM Users where login = '{$_SESSION['logged']}';";
+                $result = mysqli_query($connection,$sql);
+                var_dump($result);
+
+
 
                 echo '<h1>Hello logged user</h1>';
                 echo '<label for="login"><b>Login</b></label>';
