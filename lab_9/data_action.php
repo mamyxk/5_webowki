@@ -10,6 +10,12 @@ if(isset($_SESSION['logged'])){
 
     mysqli_query($connection,$sql);
 }else{
+    $login = mysqli_real_escape_string($connection,$_POST['login']);
+    $name = mysqli_real_escape_string($connection,$_POST['name']);
+    $password = mysqli_real_escape_string($connection,$_POST['psw']);
+    $surname = mysqli_real_escape_string($connection,$_POST['surname']);
+    $sql = "insert into Users values ('DEFAULT,{$login}','{$password}','{$name}','{$surname}');";
+    mysqli_query($connection,$sql);
 
 }
 
