@@ -3,6 +3,7 @@
 require('db_config.php');
 
 $conn = new mysqli($db_host, $db_user, $db_pass);
+session_start();
 
 if(isset($_SESSION['logged'])){
     //Zalogowany
@@ -19,11 +20,10 @@ if(isset($_SESSION['logged'])){
             $result = $conn ->query($sql);
             if(mysqli_num_rows($result)==1){
                 echo "Zalogowano";
+                $_SESSION['logged']=$_POST['uname'];
             }
           echo "Connected successfully";
     }
 }
-
-
 
 ?>
