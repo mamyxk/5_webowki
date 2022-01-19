@@ -15,6 +15,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }else{
     $conn ->query($query_create_table_users);
+    header('Location: create_users.php');
+
   }
 
 ?>
