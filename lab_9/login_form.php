@@ -20,10 +20,10 @@ if(isset($_SESSION['logged'])){
             $uname = mysqli_real_escape_string($connection,$_POST['username']);
             $psw = mysqli_real_escape_string($connection,$_POST['psw']);
             $sql = "SELECT * FROM Users where login = ".$uname." and password = ".$psw.";";
-            $result = $connection ->query($sql);
+            $result = mysqli_query($connection,$sql);
             $num_rows = mysqli_num_rows($result);
             var_dump($num_rows);
-            if($num_rows==1){
+            if($num_rows){
                 echo "Zalogowano";
                 $_SESSION['logged']=$_POST['username'];
             }
