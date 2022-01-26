@@ -12,8 +12,8 @@ Proj_sys_webowych
 - [x] Lista 8 (10 na 10)
 - [x] Lista 9 (8,5 na 10)
 - [x] Lista 10 (9 na 10)
-- [ ] Lista 11 (? na 10)
-- [ ] Lista 12 (? na 10)
+- [x] Lista 11 (5 na 10)
+- [x] Lista 12 (9 na 10)
 
 ### Koniec
 
@@ -31,6 +31,7 @@ Proj_sys_webowych
 |     8      |      10 |
 |     9      |     8,5 |
 |     10     |       9 |
-|     11     |         |
-|     12     |         |
-|  **Suma**  |  **86** |
+|     11     |       5 |
+|     12     |       9 |
+|  **Suma**  |  *100** |
+
