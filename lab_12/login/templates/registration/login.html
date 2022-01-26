@@ -1,0 +1,57 @@
+<h2 style="text-align: center">Log in</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if request.GET.next %}
+        <input type="hidden" name="next" value="{{ request.GET.next }}"/>
+    {% endif %}
+    <button type="submit">Log In</button>
+    <br> Don't have an account? <a href="{% url 'signup' %}"> Register </a>
+</form>
+<style>
+    form {
+        border: 3px solid #f1f1f1;
+        margin: 0 auto;
+        width: 350px;
+        padding: 10px;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    ul {
+        color: red;
+        border-left: 5px solid red;
+        background-color: #f1f1f1;
+        list-style-type: none;
+        padding: 10px 20px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+</style>

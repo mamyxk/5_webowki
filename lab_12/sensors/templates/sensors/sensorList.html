@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+{% include "sensors/topNavBar.html" %}
+
+<div style="padding-left:16px">
+    <table>
+        <tr>
+            <th>Sensor type</th>
+            <th>HWID</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        {% for sensor in sensors %}
+            <tr>
+                <td>{{ sensor.type_id.name }}</td>
+                <td>{{ sensor.hwid }}</td>
+                <td>{{ sensor.name }}</td>
+                <td>{{ sensor.description }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+
+<style>
+
+    th, td {
+        border-bottom: 1px solid #ddd;
+        padding: 7px;
+        border-spacing: 0;
+    }
+
+    table {
+        width: 90%;
+        padding: 10px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+</style>
+</html>

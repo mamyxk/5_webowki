@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+{% include "sensors/topNavBar.html" %}
+<h2>Bookmarked types of sensors</h2>
+<div style="padding-left:16px">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Reads temperature</th>
+            <th>Temperature precision</th>
+            <th>Reads humidity</th>
+            <th>Humidity precision</th>
+            <th>Reads pressure</th>
+            <th>Pressure precision</th>
+        </tr>
+        {% for sensor_type in sensors %}
+            <tr>
+                <td>{{ sensor_type.name }}</td>
+                <td>{{ sensor_type.temperature_reads }}</td>
+                <td>{{ sensor_type.temperature_precision }}</td>
+                <td>{{ sensor_type.humidity_reads }}</td>
+                <td>{{ sensor_type.humidity_precision }}</td>
+                <td>{{ sensor_type.pressure_reads }}</td>
+                <td>{{ sensor_type.pressure_precision }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+<style>
+
+    th, td {
+        border-bottom: 1px solid #ddd;
+        padding: 7px;
+        border-spacing: 0;
+    }
+
+    table {
+        width: 90%;
+        padding: 10px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+</style>
+</html>
